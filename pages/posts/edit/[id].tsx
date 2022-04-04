@@ -23,7 +23,7 @@ type Data = {
 
 
 const PostEdit: VFC<Props> = ({data}) => {
-    const [currentTodo, setCurrentTodo] = useState<Data>({text: data.text, notes: data.notes, isCompleted: data.isComplete});
+    const [currentTodo, setCurrentTodo] = useState<Data>({text: data.text, notes: data.notes, isCompleted: data.isCompleted});
 
   const updateTodo = async () => {
     await client.patch(`/posts/${data.id}`, {
